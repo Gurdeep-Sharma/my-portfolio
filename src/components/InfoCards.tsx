@@ -10,6 +10,18 @@ const SECTIONS = [
     tags: ['Creative Thinker', 'Problem Solver', 'Team Player'],
   },
   {
+    id: 'experience',
+    icon: '💼',
+    label: 'Experience',
+    title: 'Work History',
+    subtitle: 'Professional background',
+    content: null,
+    experiences: [
+      { role: 'Full-Stack Developer', company: 'Boffin Coders Private Limited', duration: 'July 2020 - November 2025' },
+      { role: 'Freelancer', company: 'Self-employed', duration: 'November 2025 - Present' },
+    ],
+  },
+  {
     id: 'skills',
     icon: '📚',
     label: 'Skills',
@@ -38,18 +50,6 @@ const SECTIONS = [
     ],
   },
   {
-    id: 'experience',
-    icon: '💼',
-    label: 'Experience',
-    title: 'Work History',
-    subtitle: 'Professional background',
-    content: null,
-    experiences: [
-      { role: 'Full-Stack Developer', company: 'Boffin Coders Private Limited', duration: 'July 2020 - November 2025' },
-      { role: 'Freelancer', company: 'Self-employed', duration: 'November 2025 - Present' },
-    ],
-  },
-  {
     id: 'contact',
     icon: '📬',
     label: 'Contact',
@@ -60,15 +60,6 @@ const SECTIONS = [
       { icon: '📱', label: 'Phone', value: '+91 79732 49610' },
       { icon: '✉️', label: 'Email', value: 'gurdeepsharma5492@gmail.com' },
     ],
-  },
-  {
-    id: 'infrastructure',
-    icon: '🖧',
-    label: 'Infrastructure',
-    title: 'Server Architecture',
-    subtitle: 'Self-hosted services and deployments',
-    content: 'Experienced in deploying, managing, and scaling web applications using modern DevOps practices and cloud infrastructure.',
-    tags: ['Linux', 'Docker', 'Nginx', 'AWS', 'CI/CD'],
   },
 ]
 
@@ -144,7 +135,7 @@ export default function InfoCards({ activeSection }: { activeSection: number }) 
       </div>
 
       <div className="scroll-dots">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
+        {[1, 2, 3, 4, 5].map((i) => (
           <div key={i} className={`scroll-dot ${activeSection === i ? 'active' : ''}`} />
         ))}
       </div>

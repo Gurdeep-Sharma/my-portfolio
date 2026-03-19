@@ -44,7 +44,7 @@ function App() {
         </directionalLight>
         <directionalLight position={[-5, 5, -5]} intensity={0.4} color="#a0c4ff" />
         <pointLight position={[0, -2, 4]} intensity={0.3} color="#ffb86c" />
-        <ScrollControls pages={7} damping={0.25}>
+        <ScrollControls pages={6} damping={0.25}>
           <Scene onSectionChange={handleScrollSection} activeSection={activeSection} />
         </ScrollControls>
       </Canvas>

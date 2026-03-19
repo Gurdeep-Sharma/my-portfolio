@@ -23,34 +23,28 @@ const KEYFRAMES = [
     zoom: 200,
   },
   {
-    // 2: Books — Skills
+    // 2: Calendar — Experience
+    position: new THREE.Vector3(3.5, 3, 0),
+    target: new THREE.Vector3(1.6, -0.6, -1.0),
+    zoom: 240,
+  },
+  {
+    // 3: Books — Skills
     position: new THREE.Vector3(-4, 5, 6),
     target: new THREE.Vector3(-1.6, -1.2, 0.15),
     zoom: 200,
   },
   {
-    // 3: Monitor — Projects
+    // 4: Monitor — Projects
     position: new THREE.Vector3(2, 5, 6),
     target: new THREE.Vector3(0, -0.6, -0.6),
     zoom: 170,
-  },
-  {
-    // 4: Calendar — Experience
-    position: new THREE.Vector3(3.5, 3, 0),
-    target: new THREE.Vector3(1.6, -0.6, -1.0),
-    zoom: 240,
   },
   {
     // 5: Phone + Letter — Contact
     position: new THREE.Vector3(4, 4, 6),
     target: new THREE.Vector3(0.7, -1.2, 0.65),
     zoom: 210,
-  },
-  {
-    // 6: Server Rack — Infrastructure (downgraded view)
-    position: new THREE.Vector3(2, 0.2, 0.8),
-    target: new THREE.Vector3(2, -0.8, -0.6),
-    zoom: 260,
   },
 ]
 

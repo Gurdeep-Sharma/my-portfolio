@@ -56,8 +56,8 @@ export default function DeskSetup({ activeSection = 0 }: { activeSection?: numbe
 
       {/* ============ MONITOR ============ */}
       <group position={[0, 0.08, -0.6]}>
-        {activeSection === 3 && <pointLight position={[0, 0.5, 0.5]} intensity={2} color="#fff5e6" distance={3} />}
-        <group onClick={(e) => { e.stopPropagation(); scrollToSection(3) }} onPointerOver={over} onPointerOut={out}>
+        {activeSection === 4 && <pointLight position={[0, 0.5, 0.5]} intensity={2} color="#fff5e6" distance={3} />}
+        <group onClick={(e) => { e.stopPropagation(); scrollToSection(4) }} onPointerOver={over} onPointerOut={out}>
           <Cylinder args={[0.35, 0.4, 0.06, 32]} position={[0, 0.03, 0]} castShadow>
             <meshStandardMaterial color="#1a1a1e" metalness={0.7} roughness={0.2} />
           </Cylinder>
@@ -155,8 +155,8 @@ export default function DeskSetup({ activeSection = 0 }: { activeSection?: numbe
 
       {/* ============ BOOKS ============ */}
       <group position={[-1.6, 0.08, 0.15]}>
-        {activeSection === 2 && <pointLight position={[0, 0.5, 0]} intensity={1.5} color="#fff5e6" distance={2} />}
-        <group onClick={(e) => { e.stopPropagation(); scrollToSection(2) }} onPointerOver={over} onPointerOut={out}>
+        {activeSection === 3 && <pointLight position={[0, 0.5, 0]} intensity={1.5} color="#fff5e6" distance={2} />}
+        <group onClick={(e) => { e.stopPropagation(); scrollToSection(3) }} onPointerOver={over} onPointerOut={out}>
           <RoundedBox args={[0.5, 0.12, 0.7]} radius={0.015} position={[0, 0.06, 0]} castShadow>
             <meshStandardMaterial color="#4a90e2" roughness={0.7} />
           </RoundedBox>
@@ -230,8 +230,8 @@ export default function DeskSetup({ activeSection = 0 }: { activeSection?: numbe
 
       {/* ============ CALENDAR ============ */}
       <group position={[1.6, 0.08, -1.0]} rotation={[0, -0.3, 0]}>
-        {activeSection === 4 && <pointLight position={[0, 0.5, 0.5]} intensity={1.5} color="#fff5e6" distance={2} />}
-        <group onClick={(e) => { e.stopPropagation(); scrollToSection(4) }} onPointerOver={over} onPointerOut={out}>
+        {activeSection === 2 && <pointLight position={[0, 0.6, -0.2]} intensity={2} color="#fff5e6" distance={2.5} />}
+        <group onClick={(e) => { e.stopPropagation(); scrollToSection(2) }} onPointerOver={over} onPointerOut={out}>
           {/* Front page */}
           <Box args={[0.26, 0.22, 0.01]} position={[0, 0.10, 0]} rotation={[-0.2, 0, 0]} castShadow>
             <meshStandardMaterial color="#f5f5f0" roughness={0.9} />
@@ -253,8 +253,7 @@ export default function DeskSetup({ activeSection = 0 }: { activeSection?: numbe
 
       {/* ============ SERVER RACK ============ */}
       <group position={[2, -0.7, -0.6]}>
-        {activeSection === 6 && <pointLight position={[-0.5, 0.5, 0]} intensity={2} color="#fff5e6" distance={3} />}
-        <group onClick={(e) => { e.stopPropagation(); scrollToSection(6) }} onPointerOver={over} onPointerOut={out}>
+        <group>
           <RoundedBox args={[0.9, 1.3, 0.9]} radius={0.03} castShadow receiveShadow>
             <meshStandardMaterial color="#111115" metalness={0.5} roughness={0.4} />
           </RoundedBox>
