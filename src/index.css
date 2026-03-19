@@ -322,3 +322,56 @@ body {
   box-shadow: 0 0 8px var(--accent-cyan);
   transform: scale(1.3);
 }
+
+/* ========= Mobile Responsiveness ========= */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 24px;
+    text-align: center;
+  }
+  .hero-bottom-left {
+    margin: 0 auto;
+  }
+  .hero-bottom-left h1 {
+    font-size: 2rem;
+  }
+  .hero-bottom-left p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  .hero-hint {
+    margin: 0 auto;
+  }
+
+  .scroll-card {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: 24px;
+    transform: translateX(-50%) translateY(20px);
+    width: calc(100% - 48px);
+    max-height: 40vh;
+    padding: 20px;
+  }
+
+  .scroll-card.visible {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .scroll-card-inner {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .scroll-card-title {
+    font-size: 1.3rem;
+  }
+
+  .scroll-dots {
+    right: auto;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+  }
+}
