@@ -79,7 +79,9 @@ export default function CameraRig() {
     camera.lookAt(currentTarget.current)
 
     // Interpolate zoom
-    const targetZoom = THREE.MathUtils.lerp(from.zoom, to.zoom, smooth)
+    const isMobile = window.innerWidth < 768
+    const mZoom = isMobile ? 0.55 : 1
+    const targetZoom = THREE.MathUtils.lerp(from.zoom, to.zoom, smooth) * mZoom
     ;(camera as THREE.OrthographicCamera).zoom = THREE.MathUtils.lerp(
       (camera as THREE.OrthographicCamera).zoom,
       targetZoom,
