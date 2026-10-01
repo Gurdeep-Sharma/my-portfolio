@@ -34,7 +34,7 @@ export default function SiteHeader() {
           </ul>
         </nav>
         <a className="link header-resume" href={profile.resume} download>
-          Résumé (PDF)
+          Resume (PDF)
         </a>
       </div>
     </header>

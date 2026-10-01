@@ -63,7 +63,7 @@ export default function Contact() {
           </dd>
         </div>
         <div className="contact-row">
-          <dt>Résumé</dt>
+          <dt>Resume</dt>
           <dd>
             <a className="link" href={profile.resume} download>
               Gurdeep-Sharma-Resume.pdf
