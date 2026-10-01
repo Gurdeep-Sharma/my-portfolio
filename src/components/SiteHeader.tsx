@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { profile } from '../data/profile'
-import Icon from './Icon'
 
 const NAV = [
   { href: '#work', label: 'Work' },
@@ -22,14 +21,11 @@ export default function SiteHeader() {
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="container header-inner">
-        <a className="brand" href="#top" aria-label={`${profile.name}, back to top`}>
-          <span className="brand-mark" aria-hidden="true">
-            G
-          </span>
-          <span className="brand-name">{profile.name}</span>
+        <a className="brand" href="#top">
+          {profile.name}
         </a>
         <nav className="main-nav" aria-label="Main">
-          <ul className="nav-links">
+          <ul>
             {NAV.map((item) => (
               <li key={item.href}>
                 <a href={item.href}>{item.label}</a>
@@ -37,8 +33,8 @@ export default function SiteHeader() {
             ))}
           </ul>
         </nav>
-        <a className="btn btn-ghost btn-small" href={profile.resume} download>
-          Resume <Icon name="download" size={15} />
+        <a className="link header-resume" href={profile.resume} download>
+          Résumé (PDF)
         </a>
       </div>
     </header>

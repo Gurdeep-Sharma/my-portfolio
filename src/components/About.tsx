@@ -1,34 +1,22 @@
 import portrait from '../assets/gurdeep-portrait.webp'
-import { profile } from '../data/profile'
+import { about, intro, profile } from '../data/profile'
+import Section from './Section'
 
 export default function About() {
   return (
-    <section id="about" className="section" aria-labelledby="about-title">
-      <div className="container about-grid">
-        <figure className="polaroid" data-reveal>
+    <Section id="about" label="About">
+      <div className="about-grid">
+        <figure className="portrait">
           <img src={portrait} alt={profile.name} width={600} height={750} loading="lazy" decoding="async" />
-          <figcaption>Mohali, India</figcaption>
+          <figcaption>Mohali, 2026</figcaption>
         </figure>
-
-        <div className="about-copy" data-reveal>
-          <p className="kicker">About</p>
-          <h2 id="about-title" className="section-title">
-            Hi, I’m Gurdeep.
-          </h2>
-          <p>
-            I’m a full-stack engineer based in Mohali, India. I spent six years at Boffin Coders building products for
-            clients abroad, in sprint teams with product owners, designers and stakeholders, taking features from a
-            Figma file through the API, the database and the deploy.
-          </p>
-          <p>
-            Alongside delivery, I reviewed code, mentored junior developers and joined architecture planning. I use
-            AI-assisted tools (Cursor, Claude Code and OpenAI Codex) every day to ship faster.
-          </p>
-          <p className="about-goal">
-            I’m looking for a senior full-stack role with a product team, in India or remote. I can start immediately.
-          </p>
+        <div className="about-text">
+          {about.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <p className="about-now">{intro.availability}</p>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
