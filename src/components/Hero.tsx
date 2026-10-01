@@ -46,7 +46,7 @@ export default function Hero() {
                 GitHub
               </a>
               <a className="link" href={profile.resume} download>
-                Résumé (PDF, {profile.resumeSize})
+                Resume (PDF, {profile.resumeSize})
               </a>
             </p>
 
